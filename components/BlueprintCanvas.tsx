@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { DeviceType, ModuleData, Connection } from '../types';
 import { DEVICE_DIMENSIONS } from '../constants';
 import AppShell from './AppShell';
@@ -85,7 +85,7 @@ const BlueprintCanvas: React.FC<BlueprintCanvasProps> = ({ modules, connections,
                   <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
                </marker>
             </defs>
-            {connections.map((conn, idx) => {
+            {connections.map((conn) => {
               const fromMod = modules.find(m => m.id === conn.from);
               const toMod = modules.find(m => m.id === conn.to);
               if (!fromMod || !toMod) return null;

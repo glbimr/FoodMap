@@ -9,7 +9,7 @@ interface AppShellProps {
   accentColor?: string;
 }
 
-const AppShell: React.FC<AppShellProps> = ({ children, device, title, accentColor = 'bg-slate-900' }) => {
+const AppShell: React.FC<AppShellProps> = ({ children, device, title }) => {
   const isMobile = device === 'mobile';
 
   return (

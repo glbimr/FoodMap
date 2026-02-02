@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChevronRight, Clock, Users, Target, Activity } from 'lucide-react';
 
 const PRDDocument: React.FC = () => {
   return (

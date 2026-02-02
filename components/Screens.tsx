@@ -3,7 +3,7 @@ import { DeviceType } from '../types';
 import { 
   Search, Star, Clock, MapPin, ShoppingBag, 
   Plus, CreditCard, User, ChevronRight, CheckCircle2,
-  Bike, Home, Navigation, Flame, ArrowRight, Minus, MoreVertical
+  Bike, Navigation, Flame, ArrowRight, MoreVertical
 } from 'lucide-react';
 
 // --- UNIFIED DESIGN SYSTEM ---
@@ -32,7 +32,7 @@ const THEME = {
 };
 
 /* --- SCREEN 1: LOGIN & ONBOARDING --- */
-export const LoginScreen: React.FC<{ device: DeviceType }> = ({ device }) => (
+export const LoginScreen: React.FC<{ device: DeviceType }> = () => (
   <div className={`h-full flex flex-col justify-center px-6 relative bg-white overflow-hidden`}>
     {/* Decorative Background */}
     <div className="absolute -top-20 -right-20 w-64 h-64 bg-orange-50 rounded-full blur-3xl opacity-60" />
@@ -91,7 +91,7 @@ export const LoginScreen: React.FC<{ device: DeviceType }> = ({ device }) => (
 );
 
 /* --- SCREEN 2: RESTAURANT DISCOVERY --- */
-export const DiscoveryScreen: React.FC<{ device: DeviceType }> = ({ device }) => (
+export const DiscoveryScreen: React.FC<{ device: DeviceType }> = () => (
   <div className={`${THEME.bgBackground} min-h-full flex flex-col`}>
     {/* Header */}
     <div className={`bg-white px-4 pt-4 pb-3 sticky top-0 z-10 border-b ${THEME.borderLight}`}>
@@ -183,7 +183,7 @@ export const DiscoveryScreen: React.FC<{ device: DeviceType }> = ({ device }) =>
 );
 
 /* --- SCREEN 3: MENU & CART --- */
-export const MenuScreen: React.FC<{ device: DeviceType }> = ({ device }) => (
+export const MenuScreen: React.FC<{ device: DeviceType }> = () => (
   <div className="bg-white min-h-full flex flex-col">
     {/* Restaurant Hero - Compact */}
     <div className="h-32 bg-slate-800 relative shrink-0">
@@ -263,7 +263,7 @@ export const MenuScreen: React.FC<{ device: DeviceType }> = ({ device }) => (
 );
 
 /* --- SCREEN 4: CHECKOUT & PAYMENT --- */
-export const PaymentScreen: React.FC<{ device: DeviceType }> = ({ device }) => (
+export const PaymentScreen: React.FC<{ device: DeviceType }> = () => (
   <div className={`${THEME.bgBackground} min-h-full p-4 flex flex-col gap-4`}>
     
     {/* Address Section */}
@@ -462,32 +462,4 @@ export const TrackingScreen: React.FC<{ device: DeviceType }> = ({ device }) => 
                           <div className="w-0.5 h-6 bg-slate-100 absolute top-2 left-[3px]" />
                       </div>
                       <div>
-                          <div className={`text-[10px] font-bold ${THEME.textMain}`}>Order Picked Up</div>
-                          <div className={`text-[9px] ${THEME.textSub}`}>12:32 PM</div>
-                      </div>
-                   </div>
-                   <div className="flex gap-3 opacity-50">
-                      <div className="mt-0.5 w-2 h-2 rounded-full bg-slate-300" />
-                      <div>
-                          <div className={`text-[10px] font-bold ${THEME.textMain}`}>Arriving at Home</div>
-                          <div className={`text-[9px] ${THEME.textSub}`}>~12:45 PM</div>
-                      </div>
-                   </div>
-              </div>
-          </div>
-      </div>
-    </div>
-  );
-};
-
-/* --- RENDERER --- */
-export const ScreenRenderer: React.FC<{ id: string; device: DeviceType }> = ({ id, device }) => {
-  switch (id) {
-    case 'login': return <LoginScreen device={device} />;
-    case 'discovery': return <DiscoveryScreen device={device} />;
-    case 'menu': return <MenuScreen device={device} />;
-    case 'payment': return <PaymentScreen device={device} />;
-    case 'tracking': return <TrackingScreen device={device} />;
-    default: return <div className="flex items-center justify-center h-full text-[10px]">Unknown Screen</div>;
-  }
-};
+                          <div className={`text-[10px] font-bold ${

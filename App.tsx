@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Smartphone, Monitor, GitGraph, FileText, Figma } from 'lucide-react';
 import BlueprintCanvas from './components/BlueprintCanvas';
 import PRDDocument from './components/PRDDocument';
