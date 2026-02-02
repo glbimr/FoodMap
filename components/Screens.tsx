@@ -32,9 +32,7 @@ const THEME = {
 };
 
 /* --- SCREEN 1: LOGIN & ONBOARDING --- */
-export const LoginScreen = ({ device }: { device: DeviceType }) => {
-  // Use device prop to avoid unused variable warning if needed in future
-  const _d = device; 
+export const LoginScreen = ({ device: _device }: { device: DeviceType }) => {
   return (
     <div className="h-full flex flex-col justify-center px-6 relative bg-white overflow-hidden">
       {/* Decorative Background */}
@@ -95,8 +93,7 @@ export const LoginScreen = ({ device }: { device: DeviceType }) => {
 };
 
 /* --- SCREEN 2: RESTAURANT DISCOVERY --- */
-export const DiscoveryScreen = ({ device }: { device: DeviceType }) => {
-  const _d = device;
+export const DiscoveryScreen = ({ device: _device }: { device: DeviceType }) => {
   return (
     <div className={`${THEME.bgBackground} min-h-full flex flex-col`}>
       {/* Header */}
@@ -194,8 +191,7 @@ export const DiscoveryScreen = ({ device }: { device: DeviceType }) => {
 };
 
 /* --- SCREEN 3: MENU & CART --- */
-export const MenuScreen = ({ device }: { device: DeviceType }) => {
-  const _d = device;
+export const MenuScreen = ({ device: _device }: { device: DeviceType }) => {
   return (
     <div className="bg-white min-h-full flex flex-col">
       {/* Restaurant Hero - Compact */}
@@ -277,8 +273,7 @@ export const MenuScreen = ({ device }: { device: DeviceType }) => {
 };
 
 /* --- SCREEN 4: CHECKOUT & PAYMENT --- */
-export const PaymentScreen = ({ device }: { device: DeviceType }) => {
-  const _d = device;
+export const PaymentScreen = ({ device: _device }: { device: DeviceType }) => {
   return (
     <div className={`${THEME.bgBackground} min-h-full p-4 flex flex-col gap-4`}>
       

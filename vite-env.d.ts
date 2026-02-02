@@ -31,9 +31,9 @@ declare module '*.webp' {
 }
 
 // Ensure process.env is typed for GenAI SDK usage (as per guidelines)
-declare var process: {
-  env: {
+declare namespace NodeJS {
+  interface ProcessEnv {
     API_KEY: string;
     [key: string]: string | undefined;
   }
-};
+}
